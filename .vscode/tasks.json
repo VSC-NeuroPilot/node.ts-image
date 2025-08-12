@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Activate watch mode",
+            "type": "shell",
+            "command": "npx tsc --watch --project tsconfig.json",
+            "problemMatcher": "$tsc-watch",
+            "detail": "Tell tsc (TypeScript Compiler) to watch the src/ directory for changes"
+        },
+        {
+            "label": "Run Current File",
+            "type": "shell",
+            "command": "node dist/index.js",
+            "problemMatcher": [],
+            "detail": "[Neuro] Run the compiled JavaScript file(s)"
+        },
+        {
+            "label": "Compile TypeScript files",
+            "type": "npm",
+            "script": "build",
+            "detail": "[Neuro] Compile the TypeScript files into JavaScript to execute"
+        }
+    ]
+}

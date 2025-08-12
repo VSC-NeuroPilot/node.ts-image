@@ -1,0 +1,4 @@
+{
+    "recommendations": ["esbenp.prettier-vscode", "dbaeumer.vscode-eslint", "wowbox.code-debuger"],
+    "unwantedRecommendations": ["ms-azuretools.vscode-containers"]
+}

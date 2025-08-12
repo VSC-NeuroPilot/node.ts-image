@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Auto-compile src/ directory",
+            "type": "node",
+            "request": "launch",
+            "outFiles": [
+                "${workspaceFolder}/dist/**/*.(m|c|)js"
+            ],
+            "preLaunchTask": "Activate watch mode"
+        }
+    ]
+}

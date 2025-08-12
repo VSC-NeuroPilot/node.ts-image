@@ -1,0 +1,21 @@
+{
+  "name": "neuropilot-sample-container",
+  "version": "0.0.1",
+  "description": "Sample Node.js w/ TypeScript, ESLint and Prettier container for use with the NeuroPilot VS Code extension.",
+  "license": "MIT",
+  "private": true,
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^5.2.3",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.3.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.39.0"
+  }
+}
