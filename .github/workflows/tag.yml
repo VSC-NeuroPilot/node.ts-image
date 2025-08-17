@@ -62,7 +62,7 @@ jobs:
       - name: Attempt to set package visibility to public (best-effort)
         id: make_public
         env:
-          GHTOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OWNER: ${{ github.repository_owner }}
           REPO: ${{ github.event.repository.name }}
         run: |
