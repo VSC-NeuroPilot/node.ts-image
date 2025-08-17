@@ -8,7 +8,7 @@
         "APP_DIR": "/workspace"
       }
     },
-    "runArgs": ["--init"],
+    "runArgs": ["--init", "--add-host=host.docker.internal:host-gateway"],
     "remoteUser": "node",
     "workspaceFolder": "/workspace",
     "postCreateCommand": "git init",

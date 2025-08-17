@@ -1,6 +1,6 @@
 # Node.js + TypeScript container template
 
-This is a ready-to-go pre-configured environment for Neuro to use with NeuroPilot.
+This is a ready-to-go pre-configured environment with the TypeScript Neuro Game SDK for Neuro to use with NeuroPilot.
 
 ## Setup
 
