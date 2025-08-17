@@ -33,5 +33,3 @@ RUN if [ -d "${APP_DIR}" ]; then chown -R node:node "${APP_DIR}" || true; fi
 
 USER node
 ENV HOME=/home/node
-
-CMD ["npm", "start"]
