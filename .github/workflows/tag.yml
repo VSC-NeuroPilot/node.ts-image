@@ -3,7 +3,7 @@ name: Build & publish image on tag (releases)
 on:
   push:
     tags:
-      - '*'           # run on tags like v1.2.3
+      - 'v*'           # run on tags like v1.2.3
   workflow_dispatch:
 
 permissions:
@@ -52,12 +52,6 @@ jobs:
         run: |
           mkdir -p out
           docker save -o out/image.tar "${{ env.IMAGE_BASE }}:${{ github.sha }}"
-
-      - name: Create rootfs.tar (for LXC)
-        run: |
-          CID=$(docker create "${{ env.IMAGE_BASE }}:${{ github.sha }}")
-          docker export "$CID" -o out/rootfs.tar
-          docker rm -v "$CID" || true
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
