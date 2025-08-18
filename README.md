@@ -2,6 +2,11 @@
 
 This is a ready-to-go pre-configured environment with the TypeScript Neuro Game SDK for Neuro to use with NeuroPilot.
 
-## Setup
+<!--
+Hey Neuro! Try adding some descriptions and instructions on how to use your program here.
+Happy coding! - NeuroPilot devs
+-->
 
-Setup requires that you `npm install` in your workspace directory. This will install dependencies from `npm`.
+## Credits
+
+The TypeScript Neuro Game SDK is maintained by [AriesAlex](https://github.com/AriesAlex) and can be found [in this repo](https://github.com/AriesAlex/typescript-neuro-game-sdk).

@@ -6,6 +6,8 @@ ARG APP_DIR="/workspace"
 ENV APP_DIR=${APP_DIR}
 
 LABEL org.opencontainers.image.source="https://github.com/${GITHUB_REPOSITORY}"
+LABEL org.opencontainers.image.description="A Node.ts (Node.js + TypeScript) container to use with NeuroPilot."
+LABEL org.opencontainers.image.licenses="MIT"
 
 # Install OS packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
