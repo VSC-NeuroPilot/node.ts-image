@@ -33,7 +33,7 @@ jobs:
       - name: Set up buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Build and push tag + latest + sha
+      - name: Build and push tag + sha
         id: build_and_push
         uses: docker/build-push-action@v4
         with:
@@ -44,9 +44,7 @@ jobs:
             GITHUB_REPOSITORY=${{ github.repository }}
           tags: |
             ${{ env.IMAGE_BASE }}:${{ github.ref_name }}     # semantic tag e.g. v1.2.3
-            ${{ env.IMAGE_BASE }}:latest                      # latest -> points to most recent tag
             ${{ env.IMAGE_BASE }}:${{ github.sha }}           # sha tag for traceability
-          # platforms: linux/amd64,linux/arm64   # optional multi-arch
 
       - name: Save docker image to tar (artifact)
         run: |

@@ -43,5 +43,4 @@ jobs:
             GITHUB_REPOSITORY=${{ github.repository }}
           tags: |
             ${{ env.IMAGE_BASE }}:${{ github.sha }}
-          # optionally set platforms if you want multi-arch:
-          # platforms: linux/amd64,linux/arm64
+            ${{ env.IMAGE_BASE }}:latest
