@@ -13,12 +13,16 @@ permissions:
 jobs:
   release:
     runs-on: ubuntu-latest
-    env:
-      IMAGE_BASE: ghcr.io/${{ github.repository }}
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
+      - name: Make IMAGE_BASE
+        id: image_base
+        env:
+          REPO: ${{ github.repository }}
+        run: echo "IMAGE_BASE=ghcr.io/${REPO,,}" >> $GITHUB_ENV && echo $IMAGE_BASE
 
       - name: Login to GHCR
         uses: docker/login-action@v2
@@ -56,13 +60,3 @@ jobs:
         with:
           name: dev-image-artifacts
           path: out/
-
-      - name: Attempt to set package visibility to public (best-effort)
-        id: make_public
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OWNER: ${{ github.repository_owner }}
-          REPO: ${{ github.event.repository.name }}
-        run: |
-          set -euo pipefail
-          gh api -X PATCH "$PKG_URL" -H "Accept: application/vnd.github+json" -f visibility=public
