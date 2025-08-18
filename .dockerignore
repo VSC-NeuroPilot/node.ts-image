@@ -4,4 +4,4 @@ dist
 out/
 out.tar
 node_modules/
-.github
+.github/
