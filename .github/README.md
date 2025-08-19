@@ -34,4 +34,4 @@ An image with dependencies pre-installed is available at `ghcr.io/VSC-NeuroPilot
 
 ### Other container images
 
-Refer to the `NeuroPilot container directory` for pre-configured container images with other languages.
+Refer to the `Container templates` topic on the NeuroPilot Docs for pre-configured container images with other languages.
