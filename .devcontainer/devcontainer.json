@@ -21,7 +21,7 @@
               "esbenp.prettier-vscode",
               "dbaeumer.vscode-eslint",
               "wowbox.code-debuger",
-              "Pasu4.neuropilot"
+              "vsc-neuropilot.neuropilot-base"
           ]
       }
     }
